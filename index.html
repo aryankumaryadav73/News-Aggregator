@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Aggregator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</head>
+
+<body>
+   <!-- Header -->
+    <div class="container-fluid bg-primary text-white text-center p-3">
+        <h2>Flurino News</h2>
+        <p class="mb-0">Latest news from multiple categories</p>
+    </div>
+
+    <!-- Category Buttons -->
+    <div class="container my-3 text-center">
+        <button class="btn btn-outline-primary m-1" onclick="getNews('general')">General</button>
+        <button class="btn btn-outline-primary m-1" onclick="getNews('technology')">Technology</button>
+        <button class="btn btn-outline-primary m-1" onclick="getNews('sports')">Sports</button>
+        <button class="btn btn-outline-primary m-1" onclick="getNews('business')">Business</button>
+        <button class="btn btn-outline-primary m-1" onclick="getNews('health')">Health</button>
+    </div>
+
+    <!-- News Section -->
+    <div class="container">
+        <div class="row" id="news-container">
+            <!-- News cards will be inserted here -->
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
