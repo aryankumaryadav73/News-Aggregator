@@ -53,23 +53,4 @@ button.btn:hover {
     font-size: 13px;
     color: #555;
 }
-
-/* Read more button */
-.card .btn-primary {
-    border-radius: 20px;
-    padding: 4px 14px;
-    font-size: 13px;
-}
-
-/* Loader text */
-.text-center p {
-    font-size: 14px;
-    color: #1acaf1;
-}
-
-/* Responsive spacing */
-@media (max-width: 768px) {
-    .card {
-        margin-bottom: 15px;
-    }
 }
