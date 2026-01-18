@@ -1,0 +1,75 @@
+/* Page background */
+body {
+    background-color: #f2f6fc;
+}
+
+/* Header */
+.container-fluid {
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Category buttons */
+button.btn {
+    border-radius: 20px;
+    padding: 6px 18px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+button.btn:hover {
+    background-color: #0d6efd;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* News card */
+.card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* News image */
+.card-img-top {
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Card title */
+.card-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Card description */
+.card-text {
+    font-size: 13px;
+    color: #555;
+}
+
+/* Read more button */
+.card .btn-primary {
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 13px;
+}
+
+/* Loader text */
+.text-center p {
+    font-size: 14px;
+    color: #1acaf1;
+}
+
+/* Responsive spacing */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 15px;
+    }
+}
