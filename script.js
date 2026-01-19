@@ -17,7 +17,7 @@ function getNews(category) {
     
     const url = `https://newsapi.org/v2/everything?q=${category}&language=en&pageSize=9&sortBy=publishedAt&apiKey=${apiKey}`;
 
-    fetch(url)
+    fetch(`/.netlify/functions/news?category=${category}`)
         .then(res => res.json())
         .then(data => {
             if (data.articles && data.articles.length > 0) {
