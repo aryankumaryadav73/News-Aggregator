@@ -1,4 +1,3 @@
-const apiKey = "ec2210b19be848afb9d50c336215e7c8";
 const newsContainer = document.getElementById("news-container");
 
 
@@ -14,8 +13,6 @@ function getNews(category) {
         </div>
     `;
 
-    
-    const url = `https://newsapi.org/v2/everything?q=${category}&language=en&pageSize=9&sortBy=publishedAt&apiKey=${apiKey}`;
 
     fetch(`/.netlify/functions/news?category=${category}`)
         .then(res => res.json())
