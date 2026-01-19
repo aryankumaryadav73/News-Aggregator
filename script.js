@@ -1,6 +1,5 @@
 const newsContainer = document.getElementById("news-container");
 
-
 window.onload = function () {
     getNews("technology");
 };
@@ -12,7 +11,6 @@ function getNews(category) {
             <p class="mt-2">Loading ${category} news...</p>
         </div>
     `;
-
 
     fetch(`/.netlify/functions/news?category=${category}`)
         .then(res => res.json())
@@ -30,7 +28,7 @@ function getNews(category) {
         .catch(err => {
             newsContainer.innerHTML = `
                 <p class="text-danger text-center">
-                    Unable to load news. Check API key.
+                    Unable to load news.
                 </p>
             `;
             console.error(err);
@@ -44,24 +42,20 @@ function showNews(articles) {
         const col = document.createElement("div");
         col.className = "col-md-4";
 
-        
-        const imageUrl = article.urlToImage 
-            ? article.urlToImage 
-            : "https://via.placeholder.com/300x180?text=No+Image";
+        const imageUrl = article.urlToImage || 
+            "https://via.placeholder.com/300x180?text=No+Image";
 
         col.innerHTML = `
             <div class="card mb-4 shadow-sm">
-                <img 
-                    src="${imageUrl}" 
-                    class="card-img-top"
-                    style="height:180px;object-fit:cover;"
-                    onerror="this.src='https://via.placeholder.com/300x180?text=No+Image';"
-                >
+                <img src="${imageUrl}" class="card-img-top">
                 <div class="card-body">
                     <h6 class="card-title">${article.title}</h6>
-                    <p class="card-text">${article.description || "No description available."}</p>
-                    <a href="${article.url}" target="_blank" class="btn btn-sm btn-primary">
-                        Read More
+                    <p class="card-text">
+                        ${article.description || "No description available."}
+                    </p>
+                    <a href="${article.url}" target="_blank"
+                       class="btn btn-sm btn-primary">
+                       Read More
                     </a>
                 </div>
             </div>
@@ -70,4 +64,3 @@ function showNews(articles) {
         newsContainer.appendChild(col);
     });
 }
-
